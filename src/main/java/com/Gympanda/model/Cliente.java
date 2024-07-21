@@ -1,6 +1,8 @@
 package com.Gympanda.model;
 
 public class Cliente {
+
+    private int cedula;
     private String nombre;
     private int edad;
 
@@ -11,7 +13,8 @@ public class Cliente {
 
     }
 
-    public Cliente(String nombre, int edad, String tipoMenbresia) {
+    public Cliente(int cedula, String nombre, int edad, String tipoMenbresia) {
+        this.cedula = cedula;
         this.nombre = nombre;
         this.edad = edad;
         this.tipoMenbresia = tipoMenbresia;
@@ -19,6 +22,14 @@ public class Cliente {
 
     public String getNombre() {
         return nombre;
+    }
+
+    public int getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(int cedula) {
+        this.cedula = cedula;
     }
 
     public void setNombre(String nombre) {
